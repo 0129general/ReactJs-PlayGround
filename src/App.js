@@ -12,9 +12,9 @@ function App() {
   const socketRef = useRef(null);
   const reconnectAttemptsRef = useRef(0);
   const [connectionStatus, setConnectionStatus] = useState("Disconnected");
-  console.log("connectionStatus", connectionStatus);
+  console.log("connectionStatus:", connectionStatus);
   const [notificationServerDown, setNotificationServerDown] = useState(false);
-  console.log("notificationServerDown", notificationServerDown);
+  console.log("notificationServerDown:", notificationServerDown);
   const URL_PATH_NOTIFICATION_SERVER =
     "https://node-server-playground-c3ace38e1de4.herokuapp.com/"; // WE HAVE TO REPLACE BEFORE GOING GIVE
 
