@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import NoMatch from "./pages/noMatch";
-import Reactflow from "./pages/reactflow";
+// import Reactflow from "./pages/reactflow";
 import { io } from "socket.io-client";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   const [notificationServerDown, setNotificationServerDown] = useState(false);
   console.log("notificationServerDown:", notificationServerDown);
   const URL_PATH_NOTIFICATION_SERVER =
-    "https://node-server-playground-c3ace38e1de4.herokuapp.com/"; // WE HAVE TO REPLACE BEFORE GOING GIVE
+    "wss://node-server-playground-c3ace38e1de4.herokuapp.com/"; // WE HAVE TO REPLACE BEFORE GOING GIVE
 
   const KitchenName = "dummy123";
 
@@ -113,7 +113,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="*" element={<NoMatch />}></Route>
-        <Route path="/reactflow" element={<Reactflow />}></Route>
+        {/* <Route path="/reactflow" element={<Reactflow />}></Route> */}
         <Route>
           <Route path="/" element={<Home />}>
             <Route path="about" element={<About />}></Route>
