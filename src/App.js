@@ -97,8 +97,8 @@ function App() {
       console.log("📶 Pong received");
     });
 
-    socket.on(KitchenName, (arg, serverOffset) => {
-      socket.auth.serverOffset = serverOffset;
+    socket.on(KitchenName, (arg) => {
+      // socket.auth.serverOffset = serverOffset;
 
       console.log("--Data coming from Notification server", arg);
     });
